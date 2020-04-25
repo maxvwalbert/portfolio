@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+#text01 {
+  color: #545454;
+  font-family: 'Heebo', sans-serif;
+  letter-spacing: -0.175rem;
+  width: 100%;
+  font-size: 2.75em;
+  line-height: 1.25;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#text02 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #545454 !important;
+  font-family: 'Heebo', sans-serif;
+  letter-spacing: -0.075rem;
+  width: 100%;
+  font-size: 1.25em;
+  line-height: 1.75;
+  font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#text03 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #545454;
+  font-family: 'Heebo', sans-serif;
+  letter-spacing: -0.025rem;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1.875;
+  font-weight: 300;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#icons01 {
+  font-size: 1.75em;
+  width: calc(100% + 1.25rem);
+  margin-left: -.625rem;
+  margin-top: 1.75rem;
+}
+
+#icons01 li {
+  margin: .625rem;
+  display: inline;
+}
+
+a {
+  color: #545454;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00D1FF;
+}
+
+#column1 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  width: 15rem;
+}
+
+#imageContainer {
+  margin-right: 5rem;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+}
+
+#project {
+  margin-right: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  vertical-align: top;
 }
 
-.App-link {
-  color: #61dafb;
+#main {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width:1200px) {
+  #main {
+    display: inline;
   }
-  to {
-    transform: rotate(360deg);
+
+  #project {
+    display: inline-block;
+    margin-left: 5rem;
   }
+
+  html, body {max-width: 100%; overflow-x: hidden;}
+}
+
+ol, ul {
+  list-style: none;
 }
