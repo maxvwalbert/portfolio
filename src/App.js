@@ -13,7 +13,7 @@ function Left() {
   return (
     <div id="column1">
       <h1 id="text01">Max Albert</h1>
-      <p id="text02">Software Developer</p>
+      <p id="text02">Software Developer / Writer</p>
       <p id="text03">I develop full-stack applications in RX-Java, React, and Swift. I also write blogs on agile development principals. <i>Contact me at maxvwalbert@gmail.com</i></p>
       <ul id="icons01">
         <li><a href="https://github.com/maxvwalbert"><IoLogoGithub /></a></li>
