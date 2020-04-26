@@ -84,12 +84,25 @@ img {
 
 @media only screen and (max-width:1200px) {
   #main {
-    display: inline;
+    display: inline-block;
   }
 
   #project {
-    display: inline-block;
-    margin-left: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+  }
+
+  #text {
+    margin-right: 5rem;
+  }
+
+  #Text {
+    margin-left: 2rem;
+  }
+
+  #column1 {
+    padding-left: 0rem;
   }
 
   html, body {max-width: 100%; overflow-x: hidden;}
