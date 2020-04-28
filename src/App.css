@@ -85,6 +85,7 @@ img {
 @media only screen and (max-width:60rem) {
   #main {
     display: inline-block;
+    overflow-y: scroll;
   }
 
   #project {
@@ -94,7 +95,7 @@ img {
   }
 
   #Projects {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   #text {
