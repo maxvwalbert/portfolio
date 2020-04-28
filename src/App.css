@@ -93,6 +93,10 @@ img {
     margin-left: 2rem;
   }
 
+  #Projects {
+    overflow-y: scroll;
+  }
+
   #text {
     margin-right: 5rem;
   }
@@ -105,7 +109,7 @@ img {
     padding-left: 0rem;
   }
 
-  body {max-width: 100%; overflow-x: hidden;}
+  html, body {max-width: 100%; overflow-x: hidden; overflow-y: scroll;}
 }
 
 ol, ul {
