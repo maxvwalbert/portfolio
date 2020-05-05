@@ -71,15 +71,24 @@ img {
 }
 
 #project {
-  margin-right: 10rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   vertical-align: top;
+  padding-left: 1rem;
+}
+
+#cardDiv {
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 #main {
   display: flex;
+}
+
+p {
+  margin-right: 1rem;
 }
 
 @media only screen and (max-width:60rem) {
@@ -91,7 +100,7 @@ img {
   #project {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 2rem;
+    margin-left: .5rem;
   }
 
   #Projects {
@@ -108,6 +117,14 @@ img {
 
   #column1 {
     padding-left: 0rem;
+  }
+
+  #cardDiv {
+    margin-right: 5rem;
+  }
+
+  #img {
+    height: 150px;
   }
 
   html, body {max-width: 100%; overflow-x: hidden; overflow-y: scroll;}

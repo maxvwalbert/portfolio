@@ -1,6 +1,8 @@
 import React from 'react';
+import SimpleCard from './projectCard.js'
 import { IoLogoGithub } from "react-icons/io";
 import { FaMedium } from "react-icons/fa";
+import Card from '@material-ui/core/Card';
 
 import './App.css';
 
@@ -28,15 +30,20 @@ function Left() {
 
 function Right(props) {
   return (
-    <a href={props.link}>
-      <div id="project">
-        <div id="imageContainer"><img src={props.picture}></img></div>
-        <div id="text">
-          <h1>{props.titleText}</h1>
-          <p>{props.bodyText}</p>
-        </div>
+    <div id="cardDiv">
+      <a href={props.link}>
+        <Card>
+          <div id="project">
+            <div id="imageContainer"><img src={props.picture}></img></div>
+            <div id="text">
+              <h1>{props.titleText}</h1>
+              <p>{props.bodyText}</p>
+            </div>
+          </div>
+        </Card>
+      </a>
+      <div style={{height: "20px"}}></div>
     </div>
-    </a>
   );
 }
 
@@ -47,6 +54,7 @@ function App() {
         <Left />
       </div>
       <div id="Projects">
+        <div style={{height: "10px"}}></div>
         {portfolioData.map(project => <Right {...project}/>)}
       </div>
     </div>
