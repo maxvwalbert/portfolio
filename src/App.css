@@ -66,8 +66,8 @@ a:hover {
 }
 
 img {
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
 }
 
 #project {
@@ -121,10 +121,6 @@ p {
 
   #cardDiv {
     margin-right: 5rem;
-  }
-
-  #img {
-    height: 150px;
   }
 
   html, body {max-width: 100%; overflow-x: hidden; overflow-y: scroll;}
