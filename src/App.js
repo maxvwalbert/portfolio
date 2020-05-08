@@ -1,5 +1,4 @@
 import React from 'react';
-import SimpleCard from './projectCard.js'
 import { IoLogoGithub } from "react-icons/io";
 import { FaMedium } from "react-icons/fa";
 import Card from '@material-ui/core/Card';
@@ -50,18 +49,78 @@ function Right(props) {
   );
 }
 
-function App() {
-  return (
-    <div id="main">
-      <div id="Text">
-        <Left />
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      list: portfolioData
+    };
+  }
+
+  render() {
+    return (
+      <div id="main">
+        <div id="Text">
+          <Left />
+        </div>
+        <div id="Projects">
+          <div style={{height: "10px"}}></div>
+          <List items={this.state.list} />
+        </div>
       </div>
-      <div id="Projects">
-        <div style={{height: "10px"}}></div>
-        {portfolioData.map(project => <Right {...project}/>)}
+    );
+  }
+}
+
+class List extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filtered: []
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      filtered: this.props.items
+    });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      filtered: nextProps.items
+    });
+  }
+
+  handleChange = (e) => {
+    let currentList = [];
+    let newList = [];
+
+    if (e.target.value !== "") {
+      currentList = this.props.items;
+      newList = currentList.filter(item => {
+        const lowercase = item.bodyText.toLowerCase();
+        const filter = e.target.value.toLowerCase();
+        return lowercase.includes(filter);
+      });
+    } else {
+      newList = this.props.items;
+    }
+
+    this.setState({
+      filtered: newList
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
+        {this.state.filtered.map(project => <Right key={project.titleText} {...project}/>)}
       </div>
-    </div>
-  );
+    )
+  }
 }
 
 export default App;
