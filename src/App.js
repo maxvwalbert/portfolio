@@ -78,7 +78,7 @@ class List extends React.Component {
     this.state = {
       filtered: []
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
@@ -116,7 +116,9 @@ class List extends React.Component {
   render() {
     return (
       <div>
-        <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." />
+        <div id="searchContainer">
+          <input id="searchInput" type="text" name="input" onChange={this.handleChange} placeholder="Search..."/>
+        </div>
         {this.state.filtered.map(project => <Right key={project.titleText} {...project}/>)}
       </div>
     )
