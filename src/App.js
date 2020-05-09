@@ -14,6 +14,7 @@ const portfolioData = [
   {picture: "browser.svg", link: "https://github.com/bfreiband/bueller2", titleText: "Bueller", bodyText: "Full stack web application to provide data analytics to professors. Allows students to provide real-time analytics to professors to improve their lecture. Technologies: HTML, CSS, Javascript, and Python. Worked on a colabrative team of two developers"},
   {picture: "smartphone.svg", link: "https://medium.com/better-programming/a-junior-developer-explains-task-estimation-cf4b16b70f6b", titleText: "Task Estimation", bodyText: "Medium blog post on agile development principals: task estimation. This blog post was a top story on Medium and was published by the prestigious collection Better Programming and recieved over 1K reads!"},
   {picture: "content.svg", link: "https://medium.com/better-programming/a-junior-developer-explains-code-reviews-dd47693b347e", titleText: "Code Reviews", bodyText: "My tips on how to review code! Selected as a top story by medium curators and made the front page of medium.com"},
+  {picture: "app.svg", link: "https://devpost.com/software/lyftsee", titleText: "AR Ride-Share Finder", bodyText: "An iOS app the uses google AR kit and Lyft's api to highlight your ride! Use this app to find your ride quickly."},
 ];
 
 function Left() {
